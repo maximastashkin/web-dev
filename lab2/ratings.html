@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesheet.css">
+        <title>Фильмопоиск</title>
+    </head>
+    <body>
+        <header class="site-header">
+            <a href="index.html"><img src="img/logo.png" class="logo" width="512" height="512" alt="Фильмопоиск"></a>
+            <div class="main-navigation">
+                <a href="index.html">Главная</a>
+                <a href="ratings.html">Рейтинги</a>
+                <a href="genres.html">Жанры</a>
+                <a href="history.html">История</a>
+            </div>
+        </header>
+        <div>
+            <a class="a-button" href="javascript:history.back()">НАЗАД</a>
+            <a class="a-button" href="javascript:history.forward()">ВПЕРЕД</a>
+        </div>
+        <div>
+            <input type="button" value="НАЗАД" onclick="history.back()"/>
+            <input type="button" value="ВПЕРЕД" onclick="history.forward()"/>
+        </div>
+
+        <p class="rating-info">Рейтинг составлен по результатам голосования посетителей сайта.<br/>
+            Фильмы в таблице отсортированы по рейтингу Фильмопоиска <br/>
+            Любой желающий может принять в нем участие, проголосовав за свой любимый фильм.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Фильм</th>
+                    <th>Фильмопоиск</th>
+                    <th>Кинопоиск</th>
+                    <th>IMBD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Зеленая миля</td><td>4.98</td><td>9.1</td><td>8.5</td></tr>
+                <tr><td>Побег из Шоушенка</td><td>4.97</td><td>8.9<td>9.2</td></tr>
+                <tr><td>Властелин колец: Возвращение короля</td><td>4.96</td><td>8.9<td>8.9</td></tr>
+                <tr><td>Властелин колец: Две крепости</td><td>4.959</td><td>8.8<td>8.7</td></tr>
+                <tr><td>Форест Гамп</td><td>4.5</td><td>8.8<td>7.9</td></tr>
+            </tbody>
+        </table>
+        <p class="explain-info">
+            Вы можете оценить любой фильм или сериал и написать к нему рецензию.
+            На основе ваших оценок Фильмопоиск будет рекомендовать именно то, что может вас заинтересовать.
+            Другим пользователям ваши оценки и рецензии помогут определиться с выбором и составить предварительное мнение о фильме. Оценки пользователей учитываются при формировании рейтинга на странице фильма или сериала, а также рейтинга в списке Топ-250.
+            Рейтинг фильма или сериала отображается на странице только в случае, если есть достаточное количество честных («ненакрученных») оценок. Автоматическая система защиты от накруток анализирует этот параметр.
+        </p>
+        <div class="posters-block">
+            <img src="img/Green_mile.jpg"/>
+            <img src="img/Shawshank.jpg"/>
+            <img src="img/King.jpg"/>
+        </div>
+    </body>
+</html>
