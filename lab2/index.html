@@ -15,52 +15,10 @@
                 <a href="history.html">История</a>
             </div>
         </header>
-        <br>
-        <script type="text/javascript" language="JavaScript1.2">
-            var message="Фильмопоиск"
-            var neonbasecolor="#990000"
-            var neontextcolor="red"
-            var neontextcolor2="#FFFFA8"
-            var flashspeed=100
-            var flashingletters=3
-            var flashingletters2=1
-            var flashpause=0
-            var n=0
-            if (document.all||document.getElementById){
-                document.write('<font color="'+neonbasecolor+'" size=+2>')
-                for (m=0;m<message.length;m++)
-                    document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
-                document.write('</font>')
-            }
-            else
-                document.write(message)
-            function crossref(number){
-                var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
-                return crossobj
-            }
-            function neon(){
-                //Change all letters to base color
-                if (n==0){
-                    for (m=0;m<message.length;m++)
-                        crossref(m).style.color=neonbasecolor
-                }
-                crossref(n).style.color=neontextcolor
-                if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2
-                if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
-                if (n<message.length-1) n++
-                else{
-                    n=0
-                    clearInterval(flashing)
-                    setTimeout("beginneon()",flashpause)
-                    return
-                }
-            }
-            function beginneon(){
-                if (document.all||document.getElementById)
-                    flashing=setInterval("neon()",flashspeed)
-            }
-            beginneon()
+        <script type="text/javascript" src="script.js">
+
         </script>
+        <br>
         <div class="main-container">
             <p><b>Фильм</b> (<i>англ. film — плёнка</i>), а также — кино, кинофильм, телефильм, кинокартина — отдельное произведение киноискусства.</br>
                 В технологическом плане фильм представляет собой совокупность движущихся изображений (монтажных кадров), связанных единым сюжетом.</br>
