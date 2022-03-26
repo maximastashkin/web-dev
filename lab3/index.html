@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabulation</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <form id="mainForm">
+        <div>
+            <label for="aInput">a =</label>
+            <input id="aInput" type="text">
+            <label for="nm1Input">nm1 =</label>
+            <input id="nm1Input" type="text">
+            <label for="nm2Input">nm2 =</label>
+            <input id="nm2Input" type="text">
+        </div>
+        <br/>
+        <div>
+            <label for="x0Input">x0 =</label>
+            <input id="x0Input" type="text">
+            <label for="xnInput">xn =</label>
+            <input id="xnInput" type="text">
+            <label for="hxInput">hx =</label>
+            <input id="hxInput" type="text">
+        </div>
+        <br/>
+        <div>
+            <label for="y0Input">y0 =</label>
+            <input id="y0Input" type="text">
+            <label for="ynInput">yn =</label>
+            <input id="ynInput" type="text">
+            <label for="hyInput">hy =</label>
+            <input id="hyInput" type="text">
+        </div>
+        <br/>
+        <input type="button" id="calculateButton" value="Табулировать"
+               onclick="tabulate(
+                   form.x0Input.value,
+                   form.xnInput.value,
+                   form.hxInput.value,
+                   form.y0Input.value,
+                   form.ynInput.value,
+                   form.hyInput.value,
+                   form.aInput.value,
+                   form.nm1Input.value,
+                   form.nm2Input.value)">
+        <input type="button" id="clearDivButton" value="Очистить вывод" onclick="clearDiv()">
+        <input type="button" id="clearFieldButton" value="Очистить ввод" onclick="clearForm()">
+    </form>
+    <div id="resultDiv">
+
+    </div>
+    <table>
+
+    </table>
+</body>
+</html>
