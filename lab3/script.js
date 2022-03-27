@@ -82,14 +82,7 @@ function formTableHeader() {
 }
 
 function tabulateFunc(x0, xn, hx, xTabulationPredicate, y0, yn, hy, yTabulationPredicate, a, nm1, nm2) {
-    let output = "";
-    for (let x = x0; xTabulationPredicate(x, xn, hx); x += hx) {
-        for (let y = y0; yTabulationPredicate(y, yn, hy); y += hy) {
-            let func = calculateFuncValue(x, a, y, nm1, nm2);
-            output += formOutput(x, y, func)
-        }
-    }
-    return output;
+
 }
 
 function tabulate(x0, xn, hx, y0, yn, hy, a, nm1, nm2) {
@@ -125,9 +118,36 @@ function tabulate(x0, xn, hx, y0, yn, hy, a, nm1, nm2) {
     let yTabulationPredicate = getTabulationPredicate(y0, yn);
 
     resultDiv.innerHTML = formOutputBeginning(x0, xn, hx, y0, yn);
-
+    let min = {
+        x: null,
+        y: null,
+        func: Number.POSITIVE_INFINITY
+    }
+    let max = {
+        x: null,
+        y: null,
+        func: Number.NEGATIVE_INFINITY
+    }
     let output = formTableHeader();
+    for (let x = x0; xTabulationPredicate(x, xn, hx); x += hx) {
+        for (let y = y0; yTabulationPredicate(y, yn, hy); y += hy) {
+            let func = calculateFuncValue(x, a, y, nm1, nm2);
+            if (func < min.func) {
+                min.x = x;
+                min.y = y;
+                min.func = func
+            }
+            if (func > max.func) {
+                max.x = x;
+                max.y = y;
+                max.func = func;
+            }
+            output += formOutput(x, y, func)
+        }
+    }
     output += tabulateFunc(x0, xn, hx, xTabulationPredicate, y0, yn, hy, yTabulationPredicate, a, nm1, nm2);
+    output += "</table><br/> Минимальное значение функции: " + min.func + " при x = " + min.x + "\t y = " + min.y;
+    output += "<br/> Максимальное значение функции: " + max.func + " при x = " + max.x + "\t y = " + max.y;
     resultDiv.innerHTML += output;
 }
 
