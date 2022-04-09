@@ -1,0 +1,43 @@
+form {
+    margin: 0.5%
+}
+table {
+    border-spacing: 0;
+}
+
+.result, p {
+    margin: 0.5%;
+}
+
+.cell {
+    alignment: center;
+    width: 20px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+div {
+    margin-top: 0.5%;
+}
+
+.blue-cell {
+    background: aqua;
+}
+
+.red-cell {
+    background: red;
+}
+
+button {
+    margin-top: 1%;
+    margin-right: 0.5%;
+}
+
+.error {
+    color: red;
+}
+
+#rowNumbers {
+    width: 10%;
+}
