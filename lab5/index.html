@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="matrix-utils.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <form>
+        <div>
+            Матрица M1:<br>
+            Размер: <input id="m1Rows" class="integerField" type="text"> x <input class="integerField" id="m1Columns" type="text">
+        </div>
+        <div>
+            Матрица M2:<br>
+            Размер: <input id="m2Rows" class="integerField" type="text"> x <input class="integerField" id="m2Columns" type="text">
+        </div>
+        <div>
+            Bound for random numbers in matrices:
+            from: <input id="lowerBound" class="integerField" type="text"> td: <input id="upperBound" class="integerField" type="text">
+        </div>
+        <div class="buttonsDiv">
+            <input type="button" value="Generate matrices"
+                   onclick="generateMatrices(
+                        form.m1Rows.value,
+                        form.m1Columns.value,
+                        form.m2Rows.value,
+                        form.m2Columns.value,
+                        form.lowerBound.value,
+                        form.upperBound.value)">
+            <input type="button" value="Clear output" onclick="clearOutput()">
+        </div>
+    </form>
+    <div class="tableDiv" id="m1OutputDiv">
+
+    </div>
+    <div class="tableDiv" id="m2OutputDiv">
+
+    </div>
+</body>
+</html>
