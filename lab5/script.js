@@ -75,6 +75,8 @@ function generateMatrices(m1Rows, m1Columns, m2Rows, m2Columns, lowerBound, uppe
         upperBound = parseInt(upperBound);
         let bounds = transformBorders(lowerBound, upperBound);
         if (isNumeric(m1Rows) && validateMatrixSizesByLimitations(m1Rows) && isNumeric(m1Columns) && validateMatrixSizesByLimitations(m1Columns)) {
+            m1Rows = parseInt(m1Rows);
+            m1Columns = parseInt(m1Columns);
             m1Matrix = generateMatrix(m1Rows, m1Columns, bounds);
             writeTable(m1OutputDivId, "M1", generateTableByMatrix(m1Matrix));
             drawModifyButton(m1OutputDivId);
@@ -83,6 +85,8 @@ function generateMatrices(m1Rows, m1Columns, m2Rows, m2Columns, lowerBound, uppe
         }
 
         if (isNumeric(m2Rows) && validateMatrixSizesByLimitations(m2Rows) && isNumeric(m2Columns) && validateMatrixSizesByLimitations(m2Columns)) {
+            m2Rows = parseInt(m2Rows);
+            m2Columns = parseInt(m2Columns);
             m2Matrix = generateMatrix(m2Rows, m2Columns, bounds);
             writeTable(m2OutputDivId, "M2", generateTableByMatrix(m2Matrix));
             drawModifyButton(m2OutputDivId);

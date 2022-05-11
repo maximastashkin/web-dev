@@ -1,13 +1,12 @@
+function getRandomInBounds(bounds) {
+    return Math.floor(Math.random() * (bounds.upper - bounds.lower)) + bounds.lower;
+}
+
 function generateMatrix(rows, columns, bounds) {
-    let matrix = [];
-    for (let i = 0; i < rows; i++) {
-        let row = [];
-        for (let j = 0; j < columns; j++) {
-            row.push(Math.floor(Math.random() * (bounds.upper - bounds.lower)) + bounds.lower);
-        }
-        matrix.push(row);
-    }
-    return matrix;
+    let matrix = new Array(rows).fill(new Array(columns));
+    matrix.forEach(row => row.fill(0))
+    return matrix.map(row =>
+        row.map(() => getRandomInBounds(bounds)));
 }
 
 function performArray(array) {
@@ -15,6 +14,7 @@ function performArray(array) {
 }
 
 function performMatrix(matrix) {
+
     return matrix.map(row => performArray(row));
 }
 
