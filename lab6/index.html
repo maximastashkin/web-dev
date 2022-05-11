@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="detail-utils.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <table class="interface-table">
+        <tbody>
+            <td class="interface-table">
+                <form>
+                    <div>
+                        <label>
+                            Generation
+                            <input id="generationRb" name="choice" type="radio" checked onchange="generationRadioOnChange()">
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Json
+                            <input id="jsonRb" name="choice" type="radio" onchange="jsonRadioOnChange()">
+                        </label>
+                    </div>
+                </form>
+                <form id="generatingForm">
+                    <div>
+                        Size of generating array:
+                        <input id="arraySize" type="text">
+                        <input type="button" value="Generate" onclick="generateArray(form.arraySize.value)">
+                    </div>
+                </form>
+                <form id="jsonForm" hidden>
+                    <div class="content">
+                        Load from json:
+                        <textarea cols=70 rows=30 id="json"></textarea>
+                        <input type="button" value="Load" onclick="loadFromJson(form.json.value)">
+                    </div>
+                </form>
+                <div id="outputDiv">
+
+                </div>
+            </td>
+            <td class="interface-table">
+                <form hidden id="removingForm" class="removing-form">
+                    <input type="button" value="Remove dimensions for weight less than" onclick="removeDimensionsForWeightLessThan(form.weightNominal.value)">
+                    <input id="weightNominal" type="text">
+                </form>
+                <form hidden id="addingForm" class="adding-form">
+                    <input type="button" value="Add volumes" onclick="addVolumes()">
+                </form>
+                <form hidden id="gettingForm" class="getting-form">
+                    <input type="button" value="Get details in descending order of weight" onclick="getSorted()">
+                </form>
+                <form hidden id="serializingForm" class="serializing-form">
+                    <input type="button" value="Serialize current details" onclick="serialize()">
+                    <textarea cols=70 rows=30 id="serialized" readonly></textarea>
+                </form>
+                <div id="errorDiv" class="error-div">
+
+                </div>
+            </td>
+        </tbody>
+    </table>
+</body>
+</html>
