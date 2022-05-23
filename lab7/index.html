@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Functions</title>
+        <script src="index.js" type="text/javascript"></script>
+        <script src="functions.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <div class="img-container">
+            <img src="img/task.png">
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>Choose function:</td>
+                    <td>Tick calculating characteristics:</td>
+                    <td>Tick functions variants:</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="form-td">
+                        <div class="form-container">
+                            <div>
+                                f1:
+                                <input id="f1" name="functionChoice" type="radio" checked>
+                            </div>
+                            <div>
+                                f2:
+                                <input id="f2" name="functionChoice" type="radio">
+                            </div>
+
+                            <div>
+                                f3:
+                                <input id="f3" name="functionChoice" type="radio">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="form-td">
+                        <div class="form-container">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td>Calculate minimum value:</td>
+                                    <td><input id="minimum" type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>Examine for monotonic decrease:</td>
+                                    <td><input id="isMonotonicallyDecreases" type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>Count the number of zero values:</td>
+                                    <td><input id="zeroValuesCount" type="checkbox"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                    <td colspan="form-td">
+                        <div class="form-container">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td>Memoization:</td>
+                                    <td><input id="memoization" type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>Console log debugging:</td>
+                                    <td><input id="debugging" type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>Calls counting: </td>
+                                    <td><input id="callsCount" type="checkbox"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-container">
+            Tabulation params:<br/>
+            [a: <input id="aValue" type="number">, b:<input id="bValue" type="number">]
+            with h = <input id="hValue" type="number">
+        </div>
+        <div class="form-container">
+            <input type="button" value="Calculate" onclick="calculate()">
+        </div>
+        <div id="output" class="result-div">
+
+        </div>
+        <div id="error" class="result-div error-div">
+
+        </div>
+    </body>
+</html>
