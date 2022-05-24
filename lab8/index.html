@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Classes</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="matrix.js"></script>
+    </head>
+    <body>
+    <div class="img-container">
+        <img src="img/task.png">
+    </div>
+
+    <div class="form-container">
+        Generate random square matrix by size:
+        <input type="number" id="matrixSize">
+        <button onclick="generateMatrix()">Generate</button>
+    </div>
+    <div id="actionDiv" hidden>
+        <select name="action" id="action" onchange="handleSelectChanging()">
+            <option value="toString">toString() into console.log</option>
+            <option value="actionsList">Actions list to console.log</option>
+            <option value="actionsListClear">Clear actions list</option>
+            <option value="get">Get element by indices</option>
+            <option value="set">Set element by indices</option>
+            <option value="min">Get index of minimal element</option>
+            <option value="max">Get index of maximal element</option>
+            <option value="add">Add random matrix</option>
+            <option value="sub">Subtract random matrix</option>
+            <option value="mul">Multiply random matrix</option>
+        </select>
+        <div id="actionFormDiv">
+            <div id="getIndicesDiv" class="indices-container" hidden>
+                i = <input type="number" id="getI"><br/>
+                j = <input type="number" id="getJ">
+            </div>
+            <div id="setIndicesDiv" class="indices-container" hidden>
+                i = <input type="number" id="setI"><br/>
+                j = <input type="number" id="setJ"><br/>
+                value = <input type="number" id="setValue">
+            </div>
+        </div>
+        <button onclick="action()">Action</button>
+    </div>
+    <div id="output" class="result-div">
+
+    </div>
+    <div id="operationOutput" class="result-div">
+
+    </div>
+    </body>
+</html>
