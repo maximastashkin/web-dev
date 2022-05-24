@@ -1,0 +1,29 @@
+body {
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.img-container {
+    width: 1000px;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.form-container {
+    margin-top: 1%;
+}
+
+.result-div {
+    margin-top: 2%;
+}
+
+.error-div {
+    color: red;
+}
+
+.form-td {
+    width: 500px;
+}
