@@ -16,6 +16,10 @@ body {
     margin-top: 1%;
 }
 
+#callsCountDiv {
+    margin: 10px;
+}
+
 .result-div {
     margin-top: 2%;
 }
